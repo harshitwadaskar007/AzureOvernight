@@ -18,6 +18,7 @@ namespace OvernightExecution
         {
         }
 
+        [Category("Run")]
         [Test]
         public void FirstTest()
         {
@@ -30,6 +31,7 @@ namespace OvernightExecution
             driver.Close();
         }
 
+        [Category("Run")]
         [Test]
         public void SecondTest()
         {
