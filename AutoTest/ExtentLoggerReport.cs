@@ -18,8 +18,13 @@ namespace AutoTest
 
         public ExtentLoggerReport(TestContext testContext, string user, string env, string releaseVer)
         {
-            var driverPath = Path.Combine(testContext.TestDirectory, Config.DriverPathNew);
-            driverPath = Path.GetFullPath(driverPath);
+
+            var path = AppDomain.CurrentDomain.BaseDirectory;
+
+            var driverPath2 = path.Split(new string[] { "\\bin" }, StringSplitOptions.None);
+            
+            //var driverPath = Path.Combine(testContext.TestDirectory, Config.DriverPathNew);
+            var driverPath = Path.GetFullPath(driverPath2[0]);
 
 
 
