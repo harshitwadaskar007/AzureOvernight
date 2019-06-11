@@ -1,6 +1,4 @@
-﻿using AutomationScripts.Logger;
-using AutoTest;
-using AventStack.ExtentReports;
+﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;

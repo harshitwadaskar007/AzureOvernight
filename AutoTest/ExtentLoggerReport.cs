@@ -2,17 +2,13 @@
 using AventStack.ExtentReports.Reporter;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AutomationScripts.Logger
+namespace AutoTest
 {
     public class ExtentLoggerReport
     {
+        ConfigData Config = new ConfigData();
         public ExtentHtmlReporter htmlReporter;
         public ExtentReports extent;
         ExtentTest test;
@@ -22,9 +18,15 @@ namespace AutomationScripts.Logger
 
         public ExtentLoggerReport(TestContext testContext, string user, string env, string releaseVer)
         {
+            var driverPath = Path.Combine(testContext.TestDirectory, Config.DriverPathNew);
+            driverPath = Path.GetFullPath(driverPath);
+
+
+
+
             outputPath = testContext.TestDirectory;
             filePath = $"{testContext.TestDirectory}\\{testContext.Test.ClassName}.html";
-            htmlReporter = new ExtentHtmlReporter(filePath);
+            htmlReporter = new ExtentHtmlReporter(driverPath);
             extent = new ExtentReports();
             extent.AddSystemInfo("User", user);
             extent.AddSystemInfo("Environment", env);

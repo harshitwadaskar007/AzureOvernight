@@ -1,5 +1,4 @@
-﻿using AutoTest;
-using AventStack.ExtentReports;
+﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;

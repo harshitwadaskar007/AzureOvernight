@@ -1,6 +1,4 @@
-﻿using AutomationScripts.Logger;
-using AutoTest;
-using AventStack.ExtentReports;
+﻿using AventStack.ExtentReports;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
