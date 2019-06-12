@@ -69,6 +69,33 @@ namespace AutoTest
         [Test]
         public void ThirdTest()
         {
+            driver.Navigate().GoToUrl("https://www.google.com/");
+            ReportLog.AssertIsTrue(driver.Url.Contains("google"), "we are sucessfully navigated to Google home page");
+            driver.Close();
+        }
+
+        [Category(TestCategory)]
+        [Test]
+        public void FourthTest()
+        {
+            driver.Navigate().GoToUrl("https://www.google.com/");
+            ReportLog.AssertIsTrue(driver.Url.Contains("google"), "we are sucessfully navigated to Google home page");
+            driver.Close();
+        }
+
+        [Category(TestCategory)]
+        [Test]
+        public void FifthTest()
+        {
+            driver.Navigate().GoToUrl("https://www.google.com/");
+            ReportLog.AssertIsTrue(driver.Url.Contains("google"), "we are sucessfully navigated to Google home page");
+            driver.Close();
+        }
+
+        [Category(TestCategory)]
+        [Test]
+        public void SixthTest()
+        {
             driver.Navigate().GoToUrl("https://www.pulse.datamatics.com/");
             ReportLog.AssertIsTrue(driver.Url.Contains("google"), "we are sucessfully navigated to Google home page");
             driver.Close();
